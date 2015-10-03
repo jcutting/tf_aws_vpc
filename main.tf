@@ -1,6 +1,8 @@
 resource "aws_vpc" "mod" {
   cidr_block = "${var.cidr}"
   tags { Name = "${var.name}" }
+  enable_dns_support = "${var.enable_dns_support}"
+  enable_dns_hostnames = "${var.enable_dns_hostnames}"
 }
 
 resource "aws_internet_gateway" "mod" {
